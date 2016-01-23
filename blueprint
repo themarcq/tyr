@@ -1,0 +1,71 @@
+(server - tracker)
+(desktop - desktop client)
+(android - android client)
+
+
+
+-------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~First connect~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Desktop connects to server and tells it's id
+2. Server checks if there is already the same id and ip
+3. If the same ip exists replace id with the new one and vice versa
+4. Desktop shows qrcode with it's id & pub_key and tracker's ip and ports
+5. Android scans qrcode
+6. Android connects to server asking for id's ip and ports
+7. Android connects with this data to Desktop and sends its pubkey
+8. Now they ping each other :3
+-------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~Sending  data~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Encrypt with your private key
+3. Attach your id(may be shortened)
+2. Send to all your connections (TODO: more than 1)
+-------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Server~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Store ids with ips and ports
+2. Send ips with ports when id
+3. Update ids and ips list
+4. Ping ips and remove dead ones
+-------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Android~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Check for notifications
+2. Send it
+
+TODO:
+sms sending
+sms list sending
+files sending
+files receiving
+settings
+-------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Desktop~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Receive notifications
+2. Show'em
+
+TODO:
+sms list receiving
+sms sending
+files sending
+files receiving
+settings
+-------------------------------------------------------------------
+
+
+
+TODO:
+Other Desktops (Mac OS, Windows)
